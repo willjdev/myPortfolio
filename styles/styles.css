@@ -23,14 +23,15 @@ a {
 body {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "none main none"
-    "footer footer footer";
-  grid-template-rows: 15vh 72vh 13vh;
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 15% auto 13%;
   width: 100vw;
+  height: 100vh;
   font-family: "VT323", monospace;
-  background-image: url(../images/Zeldafield.jpg);
   background-size: cover;
+  /* background: linear-gradient(35deg, #07a8ff, #7fd900, #1ca3ec, #98ce4d); */
 }
 
 /* -------- Header - Menú --------  */
@@ -38,6 +39,7 @@ body {
   grid-area: header;
   display: flex;
   flex-direction: column;
+  position: -webkit-sticky;
 }
 #menu {
   display: flex;
@@ -46,6 +48,7 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  z-index: 2;
 }
 #menu a {
   width: 100%;
@@ -59,7 +62,8 @@ body {
   height: 100%;
 }
 .logoEnlaceImg {
-  width: 20%;
+  width: 9%;
+  margin-right: 2%;
 }
 
 /* ---------- Main - Index ---------- */
@@ -70,9 +74,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .imgKnight {
-  width: 80%;
+  width: 65%;
   transform: scaleX(-1);
 }
 .textContent {
@@ -112,23 +117,159 @@ body {
   grid-template-rows: 50% 50%;
   justify-items: center;
   align-items: center;
+  height: auto;
 }
 .aboutImg {
-  width: 45%;
+  width: 60%;
   height: 80%;
   border-radius: 7%;
   align-self: end;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
 }
 .profile {
   width: 60%;
   font-size: 1rem;
   display: flex;
+  padding-top: 9%;
+  padding-bottom: 18%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+.profile h2 {
+  padding-top: 5%;
+}
 .profile p {
   text-align: justify;
+}
+
+/* ----------- Main - Tech stack ----------- */
+
+.mainTechStack {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 10%;
+  background: linear-gradient(
+    35deg,
+    rgba(23, 181, 49, 1) 0%,
+    rgba(22, 193, 203, 1) 35%,
+    rgba(234, 233, 114, 1) 72%,
+    rgba(144, 224, 97, 1) 94%
+  );
+}
+.mainTechStack h1 {
+  text-align: center;
+  font-size: 1rem;
+}
+.mainTechStack h2 {
+  font-size: 1rem;
+  margin-top: 6%;
+}
+.technologies {
+  width: 70%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  padding-bottom: 4%;
+}
+.technologies div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+}
+.technologies img {
+  width: 70%;
+}
+
+/* ----------- Main - CSS art ----------- */
+
+.mainCssArt {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 5%;
+  background: linear-gradient(
+    35deg,
+    rgba(228, 79, 92, 1) 0%,
+    rgba(246, 178, 215, 1) 33%,
+    rgba(203, 62, 198, 1) 66%,
+    rgba(88, 176, 233, 1) 100%
+  );
+}
+.cssArtTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8%;
+  text-align: center;
+}
+.cssArtTitle {
+  font-size: 0.8rem;
+}
+.sectionArt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sectionArt div {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.sectionArt img {
+  width: 50%;
+  border-radius: 5%;
+}
+
+/* ----------- Main - Contact ----------- */
+
+.mainContact {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+}
+.formText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.78rem;
+  padding-top: 5%;
+}
+.formImg {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 65%;
+  text-align: center;
+}
+.formControl {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr) 1.8fr 1fr;
+  padding: 2% 2% 6% 2%;
+  margin-bottom: 5%;
+  border: solid 0.5px black;
+  border-radius: 2%;
+  width: 80%;
+}
+.submitButton {
+  position: relative;
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  top: 20%;
 }
 
 /* -------- Footer -------- */
@@ -138,7 +279,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* background-color: #fceacc; */
 }
 .netFooter {
   display: flex;
@@ -167,8 +307,9 @@ body {
       "header "
       "main"
       "footer";
-    grid-template-rows: 15vh 75vh 10vh;
-    width: 100%;
+    grid-template-rows: 15% auto 12%;
+    width: 100vw;
+    height: 100vh;
     font-family: "VT323", monospace;
   }
   /* -------- Header - Menu -------- */
@@ -179,11 +320,13 @@ body {
     justify-content: space-between;
   }
   .logoEnlace {
-    width: 40vw;
-    font-size: 2rem;
+    width: 20%;
+    font-size: 1.2rem;
+    padding-right: 3%;
   }
   .logoEnlaceImg {
     width: 30%;
+    padding-right: 4%;
   }
   /* -- Menu -- */
   #menu {
@@ -193,7 +336,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 60vw;
     height: 100%;
   }
@@ -211,54 +354,193 @@ body {
     align-items: center;
   }
   .imgKnight {
-    width: 60%;
+    width: 35%;
     transform: scaleX(1);
   }
   .textContent {
-    height: 30%;
-    font-size: 1.5rem;
+    height: 40%;
+    font-size: 1.2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .salute {
+    position: relative;
+    width: 21ch;
+    margin-top: 2vmin;
+    font-weight: 400;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 
   /* -------- Main - About me -------- */
 
   .mainAboutMe {
     grid-area: main;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: none;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; */
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    height: 100%;
-    grid-column-gap: 5%;
+    align-items: center;
+    height: auto;
   }
   .aboutImg {
-    width: 65%;
-    height: 45%;
-    border-radius: 7%;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 40%;
+    border-radius: 50%;
     order: 1;
-    justify-self: start;
-    align-self: center;
   }
   .profile {
     justify-self: center;
-    width: 65%;
+    width: 35%;
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-grow: 1;
     order: 0;
     justify-self: end;
-    height: 30%;
+    height: 65%;
   }
   .profile p {
     text-align: justify;
     width: 80%;
     font-size: 1rem;
   }
+
+  /* -------- Main - Tech stack -------- */
+
+  .mainTechStack {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7.5%;
+  }
+  .mainTechStack h1,
+  h2 {
+    padding-bottom: 5%;
+  }
+  .technologies {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4%;
+    width: 60%;
+  }
+  .technologies img {
+    width: 60%;
+  }
+
+  /* -------- Main - CSS art -------- */
+
+  .mainCssArt {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 5%;
+    background: linear-gradient(
+      35deg,
+      rgba(228, 79, 92, 1) 0%,
+      rgba(246, 178, 215, 1) 33%,
+      rgba(203, 62, 198, 1) 66%,
+      rgba(88, 176, 233, 1) 100%
+    );
+  }
+  .cssArtTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  /* .cssArtTitle {
+    font-size: 0.8rem;
+  } */
+  .sectionArt {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 3%;
+  }
+  .sectionArt div {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .sectionArt img {
+    width: 40%;
+    border-radius: 5%;
+  }
+
+  /* -------- Main - Contact -------- */
+
+  .mainContact {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.78rem;
+    padding-top: 5%;
+  }
+  .formImg {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 45%;
+    text-align: center;
+  }
+  .formControl {
+    display: grid;
+    grid-template-rows: repeat(7, 2fr) 4fr 1.5fr;
+    padding: 2% 2% 2% 2%;
+    margin-bottom: 5%;
+    border: solid 0.5px black;
+    border-radius: 0.2%;
+    width: 80%;
+  }
+  .submitButton {
+    position: relative;
+    font-family: "VT323", monospace;
+    text-transform: uppercase;
+    top: 20%;
+  }
+
   /* -------- Footer -------- */
   .footerIndex {
     grid-area: footer;
@@ -282,7 +564,7 @@ body {
     list-style: none;
   }
   .netFooter img {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -296,6 +578,9 @@ body {
       "footer";
     grid-template-rows: 15vh 75vh 10vh;
     font-family: "VT323", monospace;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/Zeldafield.jpg);
   }
 
   /* -------- Header - Menu -------- */
@@ -306,7 +591,7 @@ body {
     justify-content: space-between;
   }
   .logoEnlace {
-    width: 15vw;
+    width: 15%;
     font-size: 1.5rem;
     display: flex;
     flex-direction: row;
@@ -360,6 +645,27 @@ body {
     flex-direction: column;
     justify-content: flex-start;
   }
+  .salute {
+    position: relative;
+    width: 21ch;
+    margin-top: 2vmin;
+    font-weight: 400;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
   /* -------- Main - About me -------- */
 
@@ -369,24 +675,25 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.6);
+    padding-top: 5%;
   }
   .aboutImg {
-    width: 15%;
-    height: 75%;
-    border-radius: 7%;
-    align-self: center;
+    width: 18%;
+    border-radius: 50%;
+    /* align-self: center; */
   }
   .profile {
     justify-self: center;
-    width: 40%;
+    width: 50%;
     font-size: 0.8rem;
-    align-self: center;
+    /* align-self: center; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    height: 65%;
   }
   .profile p {
     text-align: justify;
@@ -394,20 +701,22 @@ body {
     font-size: 1rem;
   }
 
-  /* -------- Main - About me -------- */
+  /* -------- Main - Tech Stack -------- */
 
   .mainTechStack {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background: none;
     background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 4%;
   }
   .technologies {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-row-gap: 4%;
     width: 60vw;
   }
   .technologies div {
@@ -417,13 +726,120 @@ body {
     width: 50%;
   }
 
+  /* -------- Main - CSS Art -------- */
+
+  .mainCssArt {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .cssArtTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 2%;
+  }
+  .sectionArt {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60vw;
+    align-items: center;
+    height: auto;
+    margin-bottom: 6.5%;
+  }
+  .sectionArt a {
+    text-align: center;
+  }
+  .sectionArt img {
+    width: 55%;
+    align-self: center;
+    border-radius: 5%;
+  }
+  .sectionArt img:hover {
+    transform: scale(1.1);
+  }
+
+  /* -------- Main - Contact -------- */
+  .mainContact {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "text text"
+      "form image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .formText {
+    position: relative;
+    padding-top: 2%;
+    grid-area: text;
+    align-self: flex-start;
+    justify-self: center;
+    text-align: center;
+  }
+  .formImg {
+    grid-area: image;
+    width: 50%;
+    position: relative;
+    height: auto;
+    justify-self: center;
+    bottom: 11%;
+    right: 1%;
+  }
+  .formControl {
+    grid-area: form;
+    position: relative;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 5px rgb(59, 59, 59);
+    border-radius: 2%;
+    margin-bottom: 10%;
+    padding: 3%;
+    right: 5%;
+  }
+  .formControl label {
+    padding-bottom: 1%;
+  }
+  .messageBox {
+    height: 90%;
+    width: 100%;
+  }
+  .inputBox {
+    width: 100%;
+    border: solid 0.1px black;
+    border-radius: 1%;
+    height: 30%;
+  }
+  .submitButton {
+    width: 100%;
+    top: 4%;
+    height: 20%;
+    border: solid 0.1px black;
+    border-radius: 1%;
+    font-family: "VT323", monospace;
+    text-transform: uppercase;
+  }
   /* -------- Footer -------- */
   .footerIndex {
     grid-area: footer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
   .netFooter {
     display: flex;

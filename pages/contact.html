@@ -5,60 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@codingknight's | About me</title>
+    <title>@codingknight's | Contact</title>
     <link rel="shortcut icon" href="../images/sword.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
-    <header>
-        <a class="logoNav" href="../index.html">
-            <img class="imgLogo" src="../images/MasterSword.png" alt="Logo espada y escudo">
-        </a>
-        <a class="tituloNav" href="../index.html">
-            <h4>@codingknight</h4>
+    <header class="headerIndex">
+        <a class="logoEnlace" href="../index.html">
+            <img class="logoEnlaceImg" src="../images/MasterSwordpng.png" alt="Logo espada y escudo">
+            <h4 class="logoEnlaceNombre">@codingknight</h4>
         </a>
         <nav>
-            <ul>
-                <li><a href="./about_me.html">About me</a></li>
-                <li><a href="./tech_stack.html">Tech Stack</a></li>
-                <li><a href="./css_art.html">CSS art</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+            <ul id="menu">
+                <a href="./about_me.html">
+                    <li>About me</li>
+                </a>
+                <a href="./tech_stack.html">
+                    <li>Tech Stack</li>
+                </a>
+                <a href="./css_art.html">
+                    <li>CSS art</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="contactBox">
-            <div class="questionContact">
+    <main class="mainContact">
+            <div class="formText">
                 <h2>¿Do you want to communicate with me?</h2>
                 <h3>Fill out the following form to be in contact with me!</h3>
             </div>
+            <img class="formImg" src="../images/LinkQ.png" alt="Imagen de un caballero y un hada">
             <form class="formControl" action="">
                 <label for="name">Name: </label>
-                <input type="text" id="name" name="nombre">
+                <input class="inputBox"type="text" id="name" name="nombre">
                 <label for="last_name">Last name: </label> 
-                <input type="text" id="last_name" name="last_name">
+                <input class="inputBox"type="text" id="last_name" name="last_name">
                 <label for="email">e-mail: </label>
-                <input type="email" id="email" name="email">
+                <input class="inputBox"type="email" id="email" name="email">
                 <label for="message">Message: </label>
                 <input class="messageBox" type="text" id="message" name="message">
-                <input class="textStyle" type="submit" value="submit" id="btnForm">
+                <input class="submitButton" type="submit" value="submit">
             </form>
-        </section>
     </main>
-    <footer>
-        <div class="divFooter">
-            <a href="https://www.linkedin.com/in/william-jaimes-fontalvo-04a25a189/" target="_blank"><img
-                    src="../images/logo-linkedin.svg" alt="Imagen enlace a perfil de LinkedIn"></a>
-            <a href="https://github.com/mirmooj" target="_blank"><img src="../images/logo-github.svg"
-                    alt="Imagen enlace a perfil de Github"></a>
-            <a href="https://codepen.io/elMirmo" target="_blank"><img src="../images/logo-codepen.svg"
-                    alt="Imagen enlace a perfil Codepen"></a>
-            <a href="https://twitter.com/codingwilliam" target="_blank"><img src="../images/logo-twitter.svg"
-                    alt="Imagen enlace a perfil de Twitter"></a>
-            <h5>Developed by William Jaimes. All rights reserved. 2021</h5>
-        </div>
-    
+    <footer class="footerIndex">
+        <ul class="netFooter">
+            <li><a href="https://www.linkedin.com/in/william-jaimes-fontalvo-04a25a189/" target="_blank"><img
+                        src="../images/logo-linkedin.svg" alt="Imagen enlace a perfil de LinkedIn"></a></li>
+            <li><a href="https://github.com/mirmooj" target="_blank"><img src="../images/logo-github.svg"
+                        alt="Imagen enlace a perfil de Github"></a></li>
+            <li><a href="https://codepen.io/elMirmo" target="_blank"><img src="../images/logo-codepen.svg"
+                        alt="Imagen enlace a perfil Codepen"></a></li>
+            <li><a href="https://twitter.com/codingwilliam" target="_blank"><img src="../images/logo-twitter.svg"
+                        alt="Imagen enlace a perfil de Twitter"></a></li>
+        </ul>
+        <h5>Developed by William Jaimes. All rights reserved &copy; 2021</h5>
     </footer>
     </body>
     
