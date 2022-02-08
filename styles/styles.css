@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   position: -webkit-sticky;
+  border: solid 1px red;
 }
 #menu {
   display: flex;
@@ -48,7 +49,6 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  z-index: 2;
 }
 #menu a {
   width: 100%;
@@ -168,7 +168,7 @@ body {
 }
 .mainTechStack h2 {
   font-size: 1rem;
-  margin-top: 6%;
+  margin-top: 4%;
 }
 .technologies {
   width: 70%;
@@ -318,6 +318,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0px;
   }
   .logoEnlace {
     width: 20%;
@@ -576,7 +577,7 @@ body {
       "header"
       "main"
       "footer";
-    grid-template-rows: 15vh 75vh 10vh;
+    grid-template-rows: 15vh auto 10vh;
     font-family: "VT323", monospace;
     width: 100vw;
     height: 100vh;
@@ -589,6 +590,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px;
   }
   .logoEnlace {
     width: 15%;
@@ -637,9 +639,8 @@ body {
   }
   .textContent {
     position: relative;
-    bottom: 9%;
     height: 20%;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -649,7 +650,7 @@ body {
     position: relative;
     width: 21ch;
     margin-top: 2vmin;
-    font-weight: 400;
+    font-weight: 350;
     margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -675,14 +676,16 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: auto;
     background-color: rgba(255, 255, 255, 0.6);
-    padding-top: 5%;
   }
   .aboutImg {
-    width: 18%;
-    border-radius: 50%;
-    /* align-self: center; */
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    align-self: center;
   }
   .profile {
     justify-self: center;
@@ -693,7 +696,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65%;
+    height: 71%;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .profile p {
     text-align: justify;
@@ -707,20 +712,26 @@ body {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background: none;
     background-color: rgba(255, 255, 255, 0.6);
-    padding-bottom: 4%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .mainTechStack h1 {
+    font-size: 1.4rem;
   }
   .technologies {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 1fr 1fr;
     width: 60vw;
+    padding-bottom: 0px;
   }
   .technologies div {
     text-align: center;
+    margin-top: 0px;
   }
   .technologies img {
     width: 50%;
@@ -735,6 +746,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background: none;
+    padding-top: 0px;
     background-color: rgba(255, 255, 255, 0.6);
   }
   .cssArtTitle {
@@ -742,19 +754,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4%;
+    padding-bottom: 0.8%;
     text-align: center;
     font-size: 0.8rem;
-    padding-top: 2%;
   }
   .sectionArt {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     width: 60vw;
+    grid-gap: 2%;
     align-items: center;
     height: auto;
-    margin-bottom: 6.5%;
+    margin-bottom: 1%;
+  }
+  .sectionArt div {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .sectionArt a {
     text-align: center;
@@ -776,10 +792,12 @@ body {
       "text text"
       "form image";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     background-color: rgba(255, 255, 255, 0.6);
+    align-items: center;
   }
   .formText {
+    grid-area: text;
     position: relative;
     padding-top: 2%;
     grid-area: text;
@@ -793,13 +811,17 @@ body {
     position: relative;
     height: auto;
     justify-self: center;
+    align-self: flex-start;
     bottom: 11%;
     right: 1%;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .formControl {
     grid-area: form;
     position: relative;
     justify-self: flex-end;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -807,7 +829,6 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 2px 2px 5px rgb(59, 59, 59);
     border-radius: 2%;
-    margin-bottom: 10%;
     padding: 3%;
     right: 5%;
   }
@@ -817,11 +838,13 @@ body {
   .messageBox {
     height: 90%;
     width: 100%;
+    border: solid 0.1px black;
+    border-radius: 2px;
   }
   .inputBox {
     width: 100%;
     border: solid 0.1px black;
-    border-radius: 1%;
+    border-radius: 2px;
     height: 30%;
   }
   .submitButton {
@@ -829,7 +852,7 @@ body {
     top: 4%;
     height: 20%;
     border: solid 0.1px black;
-    border-radius: 1%;
+    border-radius: 2px;
     font-family: "VT323", monospace;
     text-transform: uppercase;
   }
