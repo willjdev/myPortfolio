@@ -1,0 +1,710 @@
+/* ESTILOS GENERALES */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.textStyle {
+  font-family: "VT323", monospace; }
+
+/* ------------ RESPONSIVE INDEX------------ */
+/*----------------------------------------------------- MOBILE FIRST ----------------------------------------------------------*/
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 17% auto 13%;
+  width: 100vw;
+  height: 100vh;
+  font-family: "VT323", monospace;
+  background-size: cover;
+  /* background: linear-gradient(35deg, #07a8ff, #7fd900, #1ca3ec, #98ce4d); */ }
+
+.headerIndex {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky; }
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none; }
+  #menu li a {
+    width: 100%;
+    text-align: center; }
+
+.logoEnlace {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.logoEnlaceImg {
+  width: 9%;
+  margin-right: 2%; }
+
+/* ---------- Main - Index ---------- */
+.mainIndex {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.imgKnight {
+  width: 65%;
+  transform: scaleX(-1); }
+
+.textContent {
+  height: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.salute {
+  position: relative;
+  width: 21ch;
+  margin-top: 2vmin;
+  font-weight: 400;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  animation: typing 2s steps(12), blink 0.5s step-end infinite alternate; }
+
+@keyframes typing {
+  from {
+    width: 0; } }
+
+@keyframes blink {
+  50% {
+    border-color: transparent; } }
+
+/* -----------Main - About me----------- */
+.mainAboutMe {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  height: auto; }
+
+.aboutImg {
+  width: 60%;
+  height: 80%;
+  border-radius: 7%;
+  align-self: end;
+  padding-bottom: 2%;
+  margin-bottom: 5%; }
+
+.profile {
+  width: 60%;
+  font-size: 1rem;
+  display: flex;
+  padding-top: 9%;
+  padding-bottom: 18%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .profile h2 {
+    padding-top: 5%; }
+  .profile p {
+    text-align: justify; }
+
+/* ----------- Main - Tech stack ----------- */
+.mainTechStack {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 10%;
+  background: linear-gradient(35deg, #17b531 0%, #16c1cb 35%, #eae972 72%, #90e061 94%); }
+  .mainTechStack h1 {
+    text-align: center;
+    font-size: 1rem; }
+  .mainTechStack h2 {
+    font-size: 1rem;
+    margin-top: 4%; }
+
+.technologies {
+  width: 70%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  padding-bottom: 4%; }
+  .technologies div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%; }
+    .technologies div h2 {
+      font-size: 1rem;
+      margin-top: 4%; }
+    .technologies div img {
+      width: 70%; }
+
+/* ----------- Main - CSS art ----------- */
+.mainCssArt {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 5%;
+  background: linear-gradient(35deg, #e44f5c 0%, #f6b2d7 33%, #cb3ec6 66%, #58b0e9 100%); }
+
+.cssArtTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8%;
+  text-align: center;
+  font-size: 0.8rem; }
+
+.sectionArt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .sectionArt div {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    .sectionArt div a img {
+      width: 50%;
+      border-radius: 5%; }
+
+/* ----------- Main - Contact ----------- */
+.mainContact {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto; }
+
+.formText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.78rem;
+  padding-top: 5%; }
+
+.formImg {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 65%;
+  text-align: center; }
+
+.formControl {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr) 1.8fr 1fr;
+  padding: 2% 2% 6% 2%;
+  margin-bottom: 5%;
+  border: solid 0.5px black;
+  border-radius: 2%;
+  width: 80%; }
+
+.submitButton {
+  position: relative;
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  top: 20%; }
+
+/* -------- Footer -------- */
+.footerIndex {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+.netFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; }
+  .netFooter li {
+    list-style: none; }
+    .netFooter li a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .netFooter li a img {
+        width: 30%; }
+
+/*----------------------------------------------------- TABLET ----------------------------------------------------------*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    display: grid;
+    grid-template-areas: "header " "main" "footer";
+    grid-template-rows: 15% auto 12%;
+    width: 100vw;
+    height: 100vh;
+    font-family: "VT323", monospace; }
+  /* -------- Header - Menu -------- */
+  .headerIndex {
+    grid-area: header;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0px; }
+  .logoEnlace {
+    width: 20%;
+    font-size: 1.2rem;
+    padding-right: 3%; }
+  .logoEnlaceImg {
+    width: 30%;
+    padding-right: 4%; }
+  /* -- Menu -- */
+  #menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2rem;
+    width: 60vw;
+    height: 100%; }
+    #menu li a {
+      width: 100%;
+      text-align: center; }
+  /* -------- Main - Index -------- */
+  .mainIndex {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .imgKnight {
+    width: 35%;
+    transform: scaleX(1); }
+  .textContent {
+    height: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .salute {
+    position: relative;
+    width: 21ch;
+    margin-top: 2vmin;
+    font-weight: 400;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate; }
+  @keyframes typing {
+    from {
+      width: 0; } }
+  @keyframes blink {
+    50% {
+      border-color: transparent; } }
+  /* -------- Main - About me -------- */
+  .mainAboutMe {
+    grid-area: main;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto; }
+  .aboutImg {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 40%;
+    border-radius: 50%;
+    order: 1; }
+  .profile {
+    justify-self: center;
+    width: 35%;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    order: 0;
+    justify-self: end;
+    height: 65%; }
+    .profile p {
+      text-align: justify;
+      width: 80%;
+      font-size: 1rem; }
+  /* -------- Main - Tech stack -------- */
+  .mainTechStack {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7.5%; }
+    .mainTechStack h1 {
+      padding-bottom: 5%; }
+  .technologies {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4%;
+    width: 60%; }
+    .technologies div h2 {
+      padding-bottom: 5%; }
+    .technologies div img {
+      width: 60%; }
+  /* -------- Main - CSS art -------- */
+  .mainCssArt {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 5%;
+    background: linear-gradient(35deg, #e44f5c 0%, #f6b2d7 33%, #cb3ec6 66%, #58b0e9 100%); }
+  .cssArtTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 0.8rem; }
+  .sectionArt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 3%; }
+    .sectionArt div {
+      text-align: center;
+      padding-top: 5%;
+      padding-bottom: 5%; }
+      .sectionArt div a img {
+        width: 40%;
+        border-radius: 5%; }
+  /* -------- Main - Contact -------- */
+  .mainContact {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .formText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.78rem;
+    padding-top: 5%; }
+  .formImg {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 45%;
+    text-align: center; }
+  .formControl {
+    display: grid;
+    grid-template-rows: repeat(7, 2fr) 4fr 1.5fr;
+    padding: 2% 2% 2% 2%;
+    margin-bottom: 5%;
+    border: solid 0.5px black;
+    border-radius: 0.2%;
+    width: 80%; }
+  .submitButton {
+    position: relative;
+    font-family: "VT323", monospace;
+    text-transform: uppercase;
+    top: 20%; }
+  /* -------- Footer -------- */
+  .footerIndex {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+  .netFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start; }
+    .netFooter li {
+      list-style: none; }
+      .netFooter li a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .netFooter li a img {
+          width: 20%; } }
+
+/*----------------------------------------------------- DESKTOP ----------------------------------------------------------*/
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 15vh auto 10vh;
+    font-family: "VT323", monospace;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/Zeldafield.jpg); }
+  /* -------- Header - Menu -------- */
+  .headerIndex {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px; }
+  .logoEnlace {
+    width: 15%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+  .logoEnlaceImg {
+    width: 30%;
+    padding-right: 4%;
+    padding-left: 4%; }
+  /* -- Menu -- */
+  #menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5rem;
+    width: 60vw;
+    height: 100%; }
+    #menu li a {
+      width: 100%;
+      text-align: center; }
+      #menu li a:hover {
+        color: #585a5c; }
+  /* -------- Main - Index -------- */
+  .mainIndex {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6); }
+  .imgKnight {
+    width: 25%;
+    transform: scaleX(-1); }
+  .textContent {
+    position: relative;
+    height: 20%;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+  .salute {
+    position: relative;
+    width: 21ch;
+    margin-top: 2vmin;
+    font-weight: 350;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate; }
+  @keyframes typing {
+    from {
+      width: 0; } }
+  @keyframes blink {
+    50% {
+      border-color: transparent; } }
+  /* -------- Main - About me -------- */
+  .mainAboutMe {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6); }
+  .aboutImg {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    align-self: center; }
+  .profile {
+    justify-self: center;
+    width: 50%;
+    font-size: 0.8rem;
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 71%;
+    padding-top: 0px;
+    padding-bottom: 0px; }
+    .profile p {
+      text-align: justify;
+      width: 70%;
+      font-size: 1rem; }
+  /* -------- Main - Tech Stack -------- */
+  .mainTechStack {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 0px;
+    padding-top: 0px; }
+    .mainTechStack h1 {
+      font-size: 1.4rem; }
+  .technologies {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    width: 60vw;
+    padding-bottom: 0px; }
+    .technologies div {
+      text-align: center;
+      margin-top: 0px; }
+      .technologies div img {
+        width: 50%; }
+  /* -------- Main - CSS Art -------- */
+  .mainCssArt {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+    padding-top: 0px;
+    background-color: rgba(255, 255, 255, 0.6); }
+  .cssArtTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.8%;
+    text-align: center;
+    font-size: 0.8rem; }
+  .sectionArt {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60vw;
+    grid-gap: 2%;
+    align-items: center;
+    height: auto;
+    margin-bottom: 1%; }
+    .sectionArt div {
+      padding-top: 0px;
+      padding-bottom: 0px; }
+      .sectionArt div a {
+        text-align: center; }
+        .sectionArt div a img {
+          width: 55%;
+          align-self: center;
+          border-radius: 5%; }
+          .sectionArt div a img:hover {
+            transform: scale(1.1); }
+  /* -------- Main - Contact -------- */
+  .mainContact {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "text text" "form image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    background-color: rgba(255, 255, 255, 0.6);
+    align-items: center; }
+  .formText {
+    grid-area: text;
+    position: relative;
+    padding-top: 2%;
+    grid-area: text;
+    align-self: flex-start;
+    justify-self: center;
+    text-align: center; }
+  .formImg {
+    grid-area: image;
+    width: 50%;
+    position: relative;
+    height: auto;
+    justify-self: center;
+    align-self: flex-start;
+    bottom: 11%;
+    right: 1%;
+    padding-top: 0px;
+    padding-bottom: 0px; }
+  .formControl {
+    grid-area: form;
+    position: relative;
+    justify-self: flex-end;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 5px #3b3b3b;
+    border-radius: 2%;
+    padding: 3%;
+    right: 5%; }
+    .formControl label {
+      padding-bottom: 1%; }
+  .messageBox {
+    height: 90%;
+    width: 100%;
+    border: solid 0.1px black;
+    border-radius: 2px; }
+  .inputBox {
+    width: 100%;
+    border: solid 0.1px black;
+    border-radius: 2px;
+    height: 30%; }
+  .submitButton {
+    width: 100%;
+    top: 4%;
+    height: 20%;
+    border: solid 0.1px black;
+    border-radius: 2px;
+    font-family: "VT323", monospace;
+    text-transform: uppercase; }
+  /* -------- Footer -------- */
+  .footerIndex {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .netFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%; }
+    .netFooter li {
+      list-style: none; }
+      .netFooter li a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .netFooter li a img {
+          width: 40%; } }
