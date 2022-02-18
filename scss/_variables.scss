@@ -1,0 +1,29 @@
+/* -------- VARIABLES -------- */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+$box-color: rgba(255, 255, 255, 0.6);
+
+$text-styles: "VT323", monospace;
+
+$text-size: (
+  "regular": 0.78rem,
+  "medium": 1rem,
+  "great": 1.2rem,
+  "super": 1.4rem,
+);
+
+$gradientPastel: linear-gradient(
+  35deg,
+  rgba(228, 79, 92, 1) 0%,
+  rgba(246, 178, 215, 1) 33%,
+  rgba(203, 62, 198, 1) 66%,
+  rgba(88, 176, 233, 1) 100%
+);
+
+$gradientLemon: linear-gradient(
+  35deg,
+  rgba(23, 181, 49, 1) 0%,
+  rgba(22, 193, 203, 1) 35%,
+  rgba(234, 233, 114, 1) 72%,
+  rgba(144, 224, 97, 1) 94%
+);

@@ -1,22 +1,18 @@
 /* ESTILOS GENERALES */
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import "reset";
+@import "variables";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
-
-.textStyle {
-  font-family: "VT323", monospace;
-}
-
-/* ------------ RESPONSIVE INDEX------------ */
 
 /*----------------------------------------------------- MOBILE FIRST ----------------------------------------------------------*/
 body {
@@ -28,9 +24,8 @@ body {
   grid-template-rows: 17% auto 13%;
   width: 100vw;
   height: 100vh;
-  font-family: "VT323", monospace;
+  font-family: $text-styles;
   background-size: cover;
-  /* background: linear-gradient(35deg, #07a8ff, #7fd900, #1ca3ec, #98ce4d); */
 }
 
 .headerIndex {
@@ -54,10 +49,7 @@ body {
   }
 }
 .logoEnlace {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(row);
   height: 100%;
 }
 .logoEnlaceImg {
@@ -69,11 +61,8 @@ body {
 
 .mainIndex {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  @include flexCenter(column);
+  background-color: $box-color;
 }
 .imgKnight {
   width: 65%;
@@ -128,7 +117,7 @@ body {
 }
 .profile {
   width: 60%;
-  font-size: 1rem;
+  font-size: map-get($map: $text-size, $key: medium);
   display: flex;
   padding-top: 9%;
   padding-bottom: 18%;
@@ -148,24 +137,16 @@ body {
 .mainTechStack {
   grid-area: main;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(column);
   height: auto;
   padding-top: 10%;
-  background: linear-gradient(
-    35deg,
-    rgba(23, 181, 49, 1) 0%,
-    rgba(22, 193, 203, 1) 35%,
-    rgba(234, 233, 114, 1) 72%,
-    rgba(144, 224, 97, 1) 94%
-  );
+  background: $gradientLemon;
   h1 {
     text-align: center;
-    font-size: 1rem;
+    font-size: map-get($map: $text-size, $key: medium);
   }
   h2 {
-    font-size: 1rem;
+    font-size: map-get($map: $text-size, $key: medium);
     margin-top: 4%;
   }
 }
@@ -180,7 +161,7 @@ body {
     align-items: center;
     margin-top: 8%;
     h2 {
-      font-size: 1rem;
+      font-size: map-get($map: $text-size, $key: medium);
       margin-top: 4%;
     }
     img {
@@ -193,28 +174,17 @@ body {
 
 .mainCssArt {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(column);
   height: auto;
   padding-top: 5%;
-  background: linear-gradient(
-    35deg,
-    rgba(228, 79, 92, 1) 0%,
-    rgba(246, 178, 215, 1) 33%,
-    rgba(203, 62, 198, 1) 66%,
-    rgba(88, 176, 233, 1) 100%
-  );
+  background: $gradientPastel;
 }
 .cssArtTitle {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(column);
   padding-bottom: 8%;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: map-get($map: $text-size, $key: regular);
 }
 .sectionArt {
   display: flex;
@@ -245,12 +215,9 @@ body {
   height: auto;
 }
 .formText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter(column);
   text-align: center;
-  font-size: 0.78rem;
+  font-size: map-get($map: $text-size, $key: regular);
   padding-top: 5%;
 }
 .formImg {
@@ -270,7 +237,7 @@ body {
 }
 .submitButton {
   position: relative;
-  font-family: "VT323", monospace;
+  font-family: $text-styles;
   text-transform: uppercase;
   top: 20%;
 }
@@ -314,7 +281,7 @@ body {
     grid-template-rows: 15% auto 12%;
     width: 100vw;
     height: 100vh;
-    font-family: "VT323", monospace;
+    font-family: $text-styles;
   }
 
   /* -------- Header - Menu -------- */
@@ -328,7 +295,7 @@ body {
   }
   .logoEnlace {
     width: 20%;
-    font-size: 1.2rem;
+    font-size: map-get($map: $text-size, $key: great);
     padding-right: 3%;
   }
   .logoEnlaceImg {
@@ -345,7 +312,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: map-get($map: $text-size, $key: great);
     width: 60vw;
     height: 100%;
     li {
@@ -360,10 +327,7 @@ body {
 
   .mainIndex {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(column);
   }
   .imgKnight {
     width: 35%;
@@ -371,7 +335,7 @@ body {
   }
   .textContent {
     height: 40%;
-    font-size: 1.2rem;
+    font-size: map-get($map: $text-size, $key: great);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -403,13 +367,7 @@ body {
 
   .mainAboutMe {
     grid-area: main;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row);
     height: auto;
   }
   .aboutImg {
@@ -422,11 +380,8 @@ body {
   .profile {
     justify-self: center;
     width: 35%;
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: map-get($map: $text-size, $key: regular);
+    @include flexCenter(column);
     flex-grow: 1;
     order: 0;
     justify-self: end;
@@ -434,7 +389,7 @@ body {
     p {
       text-align: justify;
       width: 80%;
-      font-size: 1rem;
+      font-size: map-get($map: $text-size, $key: medium);
     }
   }
 
@@ -442,10 +397,7 @@ body {
 
   .mainTechStack {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(column);
     padding-bottom: 7.5%;
     h1 {
       padding-bottom: 5%;
@@ -471,28 +423,16 @@ body {
 
   .mainCssArt {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(column);
     height: auto;
     padding-top: 5%;
-    background: linear-gradient(
-      35deg,
-      rgba(228, 79, 92, 1) 0%,
-      rgba(246, 178, 215, 1) 33%,
-      rgba(203, 62, 198, 1) 66%,
-      rgba(88, 176, 233, 1) 100%
-    );
+    background: $gradientPastel;
   }
   .cssArtTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(column);
     padding-bottom: 1%;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: map-get($map: $text-size, $key: regular);
   }
   .sectionArt {
     display: grid;
@@ -521,12 +461,9 @@ body {
     align-items: center;
   }
   .formText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(column);
     text-align: center;
-    font-size: 0.78rem;
+    font-size: map-get($map: $text-size, $key: regular);
     padding-top: 5%;
   }
   .formImg {
@@ -546,35 +483,17 @@ body {
   }
   .submitButton {
     position: relative;
-    font-family: "VT323", monospace;
+    font-family: $text-styles;
     text-transform: uppercase;
     top: 20%;
   }
 
   /* -------- Footer -------- */
-  .footerIndex {
-    grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  .footerIndexTablet {
+    @extend .footerIndex;
   }
-  .netFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    li {
-      list-style: none;
-      a {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        img {
-          width: 20%;
-        }
-      }
-    }
+  .netFooterTablet {
+    @extend .netFooter;
   }
 }
 /*----------------------------------------------------- DESKTOP ----------------------------------------------------------*/
@@ -587,7 +506,7 @@ body {
       "main"
       "footer";
     grid-template-rows: 15vh auto 10vh;
-    font-family: "VT323", monospace;
+    font-family: $text-styles;
     width: 100vw;
     height: 100vh;
     background-image: url(../images/Zeldafield.jpg);
@@ -604,7 +523,7 @@ body {
   }
   .logoEnlace {
     width: 15%;
-    font-size: 1.5rem;
+    font-size: map-get($map: $text-size, $key: super);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -624,7 +543,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: map-get($map: $text-size, $key: super);
     width: 60vw;
     height: 100%;
     li {
@@ -642,11 +561,8 @@ body {
 
   .mainIndex {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    @include flexCenter(column);
+    background-color: $box-color;
   }
   .imgKnight {
     width: 25%;
@@ -655,7 +571,7 @@ body {
   .textContent {
     position: relative;
     height: 20%;
-    font-size: 1.4rem;
+    font-size: map-get($map: $text-size, $key: super);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -687,11 +603,8 @@ body {
 
   .mainAboutMe {
     grid-area: main;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    @include flexCenter(row);
+    background-color: $box-color;
   }
   .aboutImg {
     width: 20%;
@@ -699,25 +612,20 @@ body {
     border-radius: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-
     align-self: center;
   }
   .profile {
     justify-self: center;
     width: 50%;
-    font-size: 0.8rem;
-    /* align-self: center; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: map-get($map: $text-size, $key: regular);
+    @include flexCenter(column);
     height: 71%;
     padding-top: 0px;
     padding-bottom: 0px;
     p {
       text-align: justify;
       width: 70%;
-      font-size: 1rem;
+      font-size: map-get($map: $text-size, $key: regular);
     }
   }
 
@@ -730,11 +638,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background: none;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $box-color;
     padding-bottom: 0px;
     padding-top: 0px;
     h1 {
-      font-size: 1.4rem;
+      font-size: map-get($map: $text-size, $key: super);
     }
   }
   .technologies {
@@ -762,16 +670,13 @@ body {
     align-items: center;
     background: none;
     padding-top: 0px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $box-color;
   }
   .cssArtTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(column);
     padding-bottom: 0.8%;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: map-get($map: $text-size, $key: regular);
   }
   .sectionArt {
     display: grid;
@@ -809,7 +714,7 @@ body {
       "form image";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $box-color;
     align-items: center;
   }
   .formText {
@@ -869,7 +774,7 @@ body {
     height: 20%;
     border: solid 0.1px black;
     border-radius: 2px;
-    font-family: "VT323", monospace;
+    font-family: $text-styles;
     text-transform: uppercase;
   }
 
@@ -877,10 +782,7 @@ body {
 
   .footerIndex {
     grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(column);
   }
   .netFooter {
     display: flex;
