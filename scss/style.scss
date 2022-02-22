@@ -118,7 +118,7 @@ body {
 }
 .profile {
   width: 60%;
-  font-size: map-get($map: $text-size, $key: great);
+  font-size: 1.1rem;
   display: flex;
   padding-top: 9%;
   padding-bottom: 18%;
@@ -275,7 +275,7 @@ body {
       "header "
       "main"
       "footer";
-    grid-template-rows: 15% auto 12%;
+    grid-template-rows: 15% auto 13%;
     width: 100vw;
     height: 100vh;
     font-family: $text-styles;
@@ -370,7 +370,7 @@ body {
   .aboutImg {
     padding-left: 3%;
     padding-right: 3%;
-    width: 40%;
+    width: 35%;
     border-radius: 50%;
     order: 1;
   }
@@ -505,7 +505,7 @@ body {
         flex-direction: row;
         justify-content: center;
         img {
-          width: 30%;
+          width: 20%;
         }
       }
     }
