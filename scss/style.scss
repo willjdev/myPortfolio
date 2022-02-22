@@ -103,25 +103,36 @@ body {
 .mainAboutMe {
   grid-area: main;
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 35% 65%;
   justify-items: center;
   align-items: center;
   height: auto;
+  margin-top: 12%;
 }
-.aboutImg {
+/* .aboutImg {
   width: 60%;
   height: 80%;
   border-radius: 7%;
   align-self: end;
   padding-bottom: 2%;
   margin-bottom: 5%;
+} */
+.aboutImg {
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 50%;
+  padding-bottom: 0px;
+  margin-bottom: 5%;
+  height: auto;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
 }
 .profile {
   width: 60%;
   font-size: 1.1rem;
   display: flex;
-  padding-top: 9%;
-  padding-bottom: 18%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -129,7 +140,7 @@ body {
     padding-top: 5%;
   }
   p {
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -366,27 +377,41 @@ body {
     grid-area: main;
     @include flexCenter(row);
     height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .aboutImg {
     padding-left: 3%;
     padding-right: 3%;
     width: 35%;
-    border-radius: 50%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     order: 1;
+    height: 96%;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
   .profile {
     justify-self: center;
     width: 35%;
-    font-size: map-get($map: $text-size, $key: regular);
+    font-size: map-get($map: $text-size, $key: medium);
     @include flexCenter(column);
     flex-grow: 1;
     order: 0;
     justify-self: end;
-    height: 65%;
+    height: 67%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    h2 {
+      padding-top: 0px;
+    }
     p {
-      text-align: justify;
+      text-align: center;
       width: 80%;
-      font-size: map-get($map: $text-size, $key: medium);
+      font-size: map-get($map: $text-size, $key: great);
     }
   }
 
@@ -558,13 +583,14 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    font-size: map-get($map: $text-size, $key: super);
+    /* font-size: map-get($map: $text-size, $key: super); */
     width: 60vw;
     height: 100%;
     li {
       a {
         width: 100%;
         text-align: center;
+        font-size: map-get($map: $text-size, $key: super);
         &:hover {
           color: rgb(88, 90, 92);
         }
@@ -620,27 +646,44 @@ body {
     grid-area: main;
     @include flexCenter(row);
     background-color: $box-color;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: auto;
   }
-  .aboutImg {
+  /* .aboutImg {
     width: 20%;
     height: auto;
     border-radius: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     align-self: center;
+  } */
+  .aboutImg {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 25%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    height: 87%;
+    order: 1;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
   .profile {
     justify-self: center;
     width: 50%;
-    font-size: map-get($map: $text-size, $key: medium);
+    font-size: map-get($map: $text-size, $key: great);
     @include flexCenter(column);
     height: 71%;
     padding-top: 0px;
     padding-bottom: 0px;
     p {
-      text-align: justify;
+      text-align: center;
       width: 70%;
-      font-size: map-get($map: $text-size, $key: medium);
+      font-size: map-get($map: $text-size, $key: great);
     }
   }
 
@@ -691,7 +734,7 @@ body {
     @include flexCenter(column);
     padding-bottom: 0.8%;
     text-align: center;
-    font-size: map-get($map: $text-size, $key: regular);
+    font-size: map-get($map: $text-size, $key: medium);
   }
   .sectionArt {
     display: grid;
@@ -740,6 +783,7 @@ body {
     align-self: flex-start;
     justify-self: center;
     text-align: center;
+    font-size: map-get($map: $text-size, $key: medium);
   }
   .formImg {
     grid-area: image;
