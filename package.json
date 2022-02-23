@@ -1,7 +1,7 @@
 {
   "name": "portafolio-jaimes-fontalvo",
   "version": "1.0.0",
-  "description": "",
+  "description": "William Jaimes's portfolio. Frontend developer.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
