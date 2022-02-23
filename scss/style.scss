@@ -225,7 +225,7 @@ body {
 .formText {
   @include flexCenter(column);
   text-align: center;
-  font-size: map-get($map: $text-size, $key: medium);
+  font-size: map-get($map: $text-size, $key: regular);
   padding-top: 5%;
 }
 .formImg {
