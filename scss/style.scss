@@ -109,14 +109,6 @@ body {
   height: auto;
   margin-top: 12%;
 }
-/* .aboutImg {
-  width: 60%;
-  height: 80%;
-  border-radius: 7%;
-  align-self: end;
-  padding-bottom: 2%;
-  margin-bottom: 5%;
-} */
 .aboutImg {
   padding-left: 3%;
   padding-right: 3%;
@@ -583,7 +575,6 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    /* font-size: map-get($map: $text-size, $key: super); */
     width: 60vw;
     height: 100%;
     li {
@@ -650,14 +641,6 @@ body {
     margin-bottom: 0px;
     height: auto;
   }
-  /* .aboutImg {
-    width: 20%;
-    height: auto;
-    border-radius: 10px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    align-self: center;
-  } */
   .aboutImg {
     padding-left: 3%;
     padding-right: 3%;
